@@ -5,6 +5,11 @@ body {
   line-height: 1.6;
   color: #333333;
 }
+
+#about p {
+  text-align: justify;
+}
+
 header {
   background-color: #2c3e50;
   color: white;
@@ -29,6 +34,7 @@ header img {
   object-fit: cover;
   border: 3px solid white;
 }
+
 section {
   background-color: white;
   margin: 20px auto;
@@ -42,11 +48,13 @@ section h2 {
   margin-bottom: 15px;
   color: #2c3e50;
 }
+
 nav {
   background-color: #34495e;
   text-align: center;
   padding: 15px 0;
 }
+
 nav a {
   color: white;
   text-decoration: none;
@@ -58,6 +66,14 @@ nav a {
 nav a:hover {
   color: #f39c12;
 }
+
+#skills li {
+  background-color: #eaf2f8;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #2c3e50;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -69,15 +85,14 @@ td {
   padding: 12px;
   text-align: left;
 }
-
 th {
   background-color: #2c3e50;
   color: white;
 }
+
 ul {
   padding-left: 20px;
 }
-
 ul li {
   margin-bottom: 8px;
 }
