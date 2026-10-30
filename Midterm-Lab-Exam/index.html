@@ -61,9 +61,61 @@
 
     <main id="products" class="container my-5 flex-grow-1">
       <h2 class="mb-4">Featured Products</h2>
-      <div class="row g-4">
+
+      <!-- Task 1: CSS-only category filter. All radio buttons are siblings of the product grid. -->
+      <input
+        type="radio"
+        name="category"
+        id="filter-all"
+        class="category-filter-radio"
+        checked
+      />
+      <input
+        type="radio"
+        name="category"
+        id="filter-audio"
+        class="category-filter-radio"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="filter-wearables"
+        class="category-filter-radio"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="filter-power"
+        class="category-filter-radio"
+      />
+      <input
+        type="radio"
+        name="category"
+        id="filter-computer"
+        class="category-filter-radio"
+      />
+
+      <div
+        class="category-filters"
+        role="radiogroup"
+        aria-label="Filter products by category"
+      >
+        <label class="category-filter-label" for="filter-all">All</label>
+        <label class="category-filter-label" for="filter-audio">Audio</label>
+        <label class="category-filter-label" for="filter-wearables"
+          >Wearables</label
+        >
+        <label class="category-filter-label" for="filter-power"
+          >Power &amp; Connectivity</label
+        >
+        <label class="category-filter-label" for="filter-computer"
+          >Computer Accessories</label
+        >
+      </div>
+
+      <div class="row g-4" id="product-grid">
         <!-- Product 1 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-audio">
           <div class="card product-card h-100">
             <img
               src="images/earbuds.jpg"
@@ -79,7 +131,7 @@
         </div>
 
         <!-- Product 2 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-wearables">
           <div class="card product-card h-100">
             <img
               src="images/smartwatch.jpg"
@@ -95,7 +147,7 @@
         </div>
 
         <!-- Product 3 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-audio">
           <div class="card product-card h-100">
             <img
               src="images/speaker.jpg"
@@ -111,7 +163,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-power">
           <div class="card product-card h-100">
             <img
               src="images/powerbank.jpg"
@@ -127,7 +179,7 @@
         </div>
 
         <!-- Product 5 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-computer">
           <div class="card product-card h-100">
             <img
               src="images/keyboard.jpg"
@@ -143,7 +195,7 @@
         </div>
 
         <!-- Product 6 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-computer">
           <div class="card product-card h-100">
             <img
               src="images/mouse.jpg"
@@ -159,7 +211,7 @@
         </div>
 
         <!-- Product 7 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-computer">
           <div class="card product-card h-100">
             <img src="images/webcam.jpg" class="card-img-top" alt="HD Webcam" />
             <div class="card-body">
@@ -171,7 +223,7 @@
         </div>
 
         <!-- Product 8 -->
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-md-6 col-lg-3 product-item category-power">
           <div class="card product-card h-100">
             <img src="images/usbhub.jpg" class="card-img-top" alt="USB-C Hub" />
             <div class="card-body">

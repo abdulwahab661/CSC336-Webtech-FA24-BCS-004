@@ -11,7 +11,9 @@
 }
 
 .product-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .product-card:hover {
@@ -26,4 +28,77 @@
 
 .navbar-nav .nav-link:hover {
   text-decoration: underline;
+}
+
+/* =====================================
+   MIDTERM TASK 1: CSS-only category filter
+   Personal accent hue: H = 28 degrees
+   ===================================== */
+
+/* Visually hide the radio buttons but keep them available to keyboard users. */
+.category-filter-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-filter-label {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: #222222;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Show which category is currently selected, using the personal accent hue. */
+#filter-all:checked ~ .category-filters label[for="filter-all"],
+#filter-audio:checked ~ .category-filters label[for="filter-audio"],
+#filter-wearables:checked ~ .category-filters label[for="filter-wearables"],
+#filter-power:checked ~ .category-filters label[for="filter-power"],
+#filter-computer:checked ~ .category-filters label[for="filter-computer"] {
+  background-color: hsl(28, 70%, 45%);
+  border-color: hsl(28, 70%, 45%);
+  color: #ffffff;
+}
+
+/* Keep a visible keyboard focus indicator on the matching filter label. */
+#filter-all:focus-visible ~ .category-filters label[for="filter-all"],
+#filter-audio:focus-visible ~ .category-filters label[for="filter-audio"],
+#filter-wearables:focus-visible
+  ~ .category-filters
+  label[for="filter-wearables"],
+#filter-power:focus-visible ~ .category-filters label[for="filter-power"],
+#filter-computer:focus-visible
+  ~ .category-filters
+  label[for="filter-computer"] {
+  outline: 3px solid hsl(28, 70%, 45%);
+  outline-offset: 3px;
+}
+
+/* Hide non-matching Bootstrap columns. display:none removes their grid gaps. */
+#filter-audio:checked ~ #product-grid .product-item:not(.category-audio),
+#filter-wearables:checked
+  ~ #product-grid
+  .product-item:not(.category-wearables),
+#filter-power:checked ~ #product-grid .product-item:not(.category-power),
+#filter-computer:checked ~ #product-grid .product-item:not(.category-computer) {
+  display: none;
 }
