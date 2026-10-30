@@ -44,8 +44,9 @@
     </nav>
 
     <main class="container my-5 flex-grow-1">
-      <div class="row g-4">
-        <div class="col-12 col-md-6">
+      <div class="product-layout">
+        <!-- First grid area: product image -->
+        <div class="product-image">
           <img
             src="images/earbuds.jpg"
             class="img-fluid rounded"
@@ -53,15 +54,11 @@
           />
         </div>
 
-        <div class="col-12 col-md-6">
+        <!-- Second grid area: product details -->
+        <section class="product-details">
           <h1>Wireless Earbuds</h1>
           <p class="fs-3 fw-bold">Rs. 4,999</p>
-          <p>
-            Comfortable wireless earbuds with clear sound and a long battery
-            life. Comes with a charging case, so you can use them all day.
-          </p>
 
-          <!-- Quantity -->
           <label for="qty" class="form-label">Quantity</label>
           <input
             type="number"
@@ -73,7 +70,40 @@
           />
 
           <button class="btn btn-warning btn-lg">Add to Cart</button>
-        </div>
+        </section>
+
+        <!-- Third grid area: full-width product description -->
+        <section class="product-description">
+          <h2>Product Description</h2>
+          <p>
+            Enjoy your favourite music, podcasts, and calls with these Wireless
+            Earbuds. They are designed for comfortable everyday use and deliver
+            clear sound for music, videos, online classes, and phone calls. The
+            compact charging case makes them easy to carry in a pocket or bag.
+          </p>
+          <p>
+            The lightweight earbuds are suitable for listening at home, while
+            travelling, or while studying. Their simple wireless connection
+            helps you pair them with a compatible phone, tablet, or laptop
+            without dealing with extra cables. The built-in controls make common
+            listening actions convenient, while the charging case helps keep the
+            earbuds together when they are not being used.
+          </p>
+          <p>
+            For the best listening experience, keep the earbuds clean and dry,
+            store them in their charging case after use, and adjust the volume
+            to a comfortable level. Battery performance can vary depending on
+            volume, device settings, and usage. Check the product packaging for
+            the exact technical specifications and included accessories.
+          </p>
+          <p>
+            These earbuds are a practical choice for everyday audio needs. Their
+            portable design, charging case, and comfortable fit make them useful
+            for a variety of daily activities. The product details and features
+            above help you decide whether these earbuds are suitable for your
+            personal use.
+          </p>
+        </section>
       </div>
     </main>
 

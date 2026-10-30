@@ -102,3 +102,62 @@
 #filter-computer:checked ~ #product-grid .product-item:not(.category-computer) {
   display: none;
 }
+
+/* =====================================
+   MIDTERM TASK 2: product page grid layout
+   Personal breakpoint: BP = 604px
+   Sticky details offset: 74px
+   ===================================== */
+
+.product-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "image"
+    "details"
+    "description";
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.product-image {
+  grid-area: image;
+  min-width: 0;
+}
+
+.product-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-details {
+  grid-area: details;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+.product-description {
+  grid-area: description;
+  min-width: 0;
+  line-height: 1.7;
+}
+
+/* At exactly 604px and wider, image and details sit side by side. */
+@media (min-width: 604px) {
+  .product-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "image details"
+      "description description";
+  }
+
+  .product-details {
+    position: sticky;
+    top: 74px;
+    align-self: start;
+  }
+}
