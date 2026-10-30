@@ -113,6 +113,36 @@
         >
       </div>
 
+      <!-- Task 3: search and price-sort controls for the existing product cards. -->
+      <div class="row g-3 align-items-end product-tools">
+        <div class="col-12 col-md-8">
+          <label for="product-search" class="form-label fw-semibold"
+            >Search products</label
+          >
+          <input
+            type="search"
+            id="product-search"
+            class="form-control"
+            placeholder="Type a product name..."
+            autocomplete="off"
+          />
+        </div>
+        <div class="col-12 col-md-4">
+          <button
+            type="button"
+            id="sort-price-button"
+            class="btn btn-dark w-100"
+          >
+            Sort by price
+          </button>
+          <small
+            id="sort-status"
+            class="d-block mt-2 text-muted"
+            aria-live="polite"
+          ></small>
+        </div>
+      </div>
+
       <div class="row g-4" id="product-grid">
         <!-- Product 1 -->
         <div class="col-12 col-md-6 col-lg-3 product-item category-audio">
@@ -124,7 +154,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Wireless Earbuds</h5>
-              <p class="fw-bold">Rs. 4,999</p>
+              <p class="fw-bold product-price">Rs. 4,999</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -140,7 +170,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Smart Watch</h5>
-              <p class="fw-bold">Rs. 8,999</p>
+              <p class="fw-bold product-price">Rs. 8,999</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -156,7 +186,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Bluetooth Speaker</h5>
-              <p class="fw-bold">Rs. 6,499</p>
+              <p class="fw-bold product-price">Rs. 6,499</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -172,7 +202,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Power Bank 10000mAh</h5>
-              <p class="fw-bold">Rs. 3,499</p>
+              <p class="fw-bold product-price">Rs. 3,499</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -188,7 +218,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Mechanical Keyboard</h5>
-              <p class="fw-bold">Rs. 7,999</p>
+              <p class="fw-bold product-price">Rs. 7,999</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -204,7 +234,7 @@
             />
             <div class="card-body">
               <h5 class="card-title">Gaming Mouse</h5>
-              <p class="fw-bold">Rs. 2,999</p>
+              <p class="fw-bold product-price">Rs. 2,999</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -216,7 +246,7 @@
             <img src="images/webcam.jpg" class="card-img-top" alt="HD Webcam" />
             <div class="card-body">
               <h5 class="card-title">HD Webcam</h5>
-              <p class="fw-bold">Rs. 5,499</p>
+              <p class="fw-bold product-price">Rs. 5,499</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
@@ -228,11 +258,20 @@
             <img src="images/usbhub.jpg" class="card-img-top" alt="USB-C Hub" />
             <div class="card-body">
               <h5 class="card-title">USB-C Hub</h5>
-              <p class="fw-bold">Rs. 3,999</p>
+              <p class="fw-bold product-price">Rs. 3,999</p>
               <button class="btn btn-warning">Add to Cart</button>
             </div>
           </div>
         </div>
+      </div>
+
+      <div
+        id="no-products-message"
+        class="alert alert-secondary text-center mt-3"
+        role="status"
+        hidden
+      >
+        No products found
       </div>
     </main>
 
@@ -271,5 +310,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
